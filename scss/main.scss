@@ -1,0 +1,431 @@
+$titulo_color: #F76C6C;
+$titulo_tamanio: 22px;
+$titulo_fuente: 'DINPro Bold';
+
+/*var con operaciones aplicadas*/
+
+/*multiplicacion*/
+$body_height: 50%; 
+
+/*condicional*/
+$entorno:'PRODUCCION'; 
+
+/*mixin*/
+@mixin nosotros-item($bg-color, $width, $height, $margin){
+	background-color: #F8F6F6;
+    width: 370px;
+    height: 100px;
+    margin: 5px;
+} 
+
+$estadisticos_icono_color: #F76C6C;
+$estadisticos_texto_color: black;
+/*
+colores
+rojo: #F76C6C
+azul: #05386B
+
+
+*/
+
+@font-face {
+font-family: 'DINPro Light';
+font-style: normal;
+font-weight: normal;
+src: local('DINPro Light'), url('../fonts/dinpro_font/DINPro-Light.woff2') format('woff2');
+}
+
+
+@font-face {
+font-family: 'DINPro Medium';
+font-style: normal;
+font-weight: normal;
+src: local('DINPro Medium'), url('../fonts/dinpro_font/DINPro-Medium.woff2') format('woff2');
+}
+
+
+@font-face {
+font-family: 'DINPro Bold';
+font-style: normal;
+font-weight: normal;
+src: local('DINPro Bold'), url('../fonts/dinpro_font/DINPro-Bold.woff2') format('woff2');
+}
+
+
+@font-face {
+font-family: 'DINPro Black';
+font-style: normal;
+font-weight: normal;
+src: local('DINPro Black'), url('../fonts/dinpro_font/DINPro-Black.woff2') format('woff2');
+}
+
+@font-face {
+font-family: 'DINPro Regular';
+font-style: normal;
+font-weight: normal;
+src: local('DINPro Regular'), url('../fonts/dinpro_font/DINPro-Regular.woff2') format('woff2');
+}
+
+body, html{
+  font-size: 18px;
+  color: black;
+  font-family: 'DINPro Light';
+  height: $body_height*2;
+  margin: 0px;
+  @if $entorno=='TESTING'{
+ 	background-color:red;
+  }@else{
+	background-color:white;
+
+  }
+  
+}
+
+.titulo{
+  font-family: $titulo_fuente;
+  font-size: $titulo_tamanio;
+  color: $titulo_color;
+}
+
+.separador {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-width: 3px;
+    border-color: #05386B;
+    max-width: 100px;
+    margin: 0px;
+}
+
+.img-home{
+  z-index: -5;
+  position: relative;
+}
+
+.navbar-color{
+	background: #F8E9A1
+}
+
+/* CONTACTO*/
+
+
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #F76C6C;
+  color: #fff;
+  padding: 10px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* FIN CONTACTO*/
+
+/* PIE */
+.pie {  
+  font-family: 'DINPro Bold';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #000000 ;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;  
+}
+
+.pie >p{
+  margin: 0
+}
+
+.footer-icon{
+  padding-left: 10px;
+}
+
+
+
+footer i.fa:hover {    
+  color: #05386B;
+}
+
+.footer-icon{
+  color: #F76C6C ;
+}
+
+
+/* FIN PIE */
+
+
+/*NOSOTROS */
+
+.nosotros-titulo{
+  font-family: 'DINPro Bold';
+  font-size: 20px;
+}
+
+.nosotros-detalle{
+  
+}
+
+
+.nosotros-contenedor{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+}
+
+.nosotros-item{
+	@include nosotros-item(#F8F6F6, 370px, 100px, 5px);
+
+}
+
+
+
+.nosotros-item-detalle{
+      text-align: center;
+      padding:  5px;
+}
+
+.nosotros-item-par
+.nosotros-item-detalle{
+    color: #fff;
+}
+
+.nosotros-item-detalle span{
+    font-weight:  bold;
+    color: #F76C6C;
+}
+
+.nosotros-item-detalle:hover span{
+      color: #fff;
+      background-color: #05386B;
+}
+
+.nosotros-carousel{
+    max-height: 250px;
+}
+
+.nosotros-img{
+    text-align: center;
+    margin: 10px;
+}
+
+/* ESTADISTICOS*/
+
+
+.estadisticos-contenedor-presentacion  {
+
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin: 0px;
+  padding: 20px;
+  color: #000000 ;
+  font-weight: bold;
+}
+
+.estadisticos-contenedor-detalle {
+  background-color: #F76C6C;
+  width: 33.3%;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.estadisticos-item-titulo{
+  font-size: 30px;
+  color: #05386b;
+  font-weight: bold;
+}
+
+
+.estadisticos-destacado{
+  font-size: 25px;
+  color: #ffff;
+}
+
+
+.counter-contenedor {
+    display: block;
+    padding: 40px 20px 37px;
+    text-align: center;
+    background: #F8F6F6;
+}
+
+.counter-contenedor p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: $estadisticos_texto_color;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.counter-contenedor i {
+    font-size: 60px;
+    margin: 0 0 15px;
+    color: $estadisticos_icono_color;
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #F76C6C;
+    line-height: 28px
+}
+
+
+
+/* FIN ESTADISTICOS*/
+    
+
+
+/* FIN NOSOTROS*/
+
+/* SERVICIO */
+
+.servicio-subtitulo{
+  color:black;
+}
+
+
+
+.zoom{
+    transition: transform 1s;
+}
+
+.zoom:hover { 
+    transform: scale(1.1); 
+}
+
+
+.servicio-item-titulo{
+  text-align: center;
+}
+
+.servicio-item-detalle{
+   padding: 3px 20px;
+   text-align: justify;
+}
+
+
+
+/* FIN SERVICIOS*/
+
+/* DONAR PAGINA*/
+.donar-persona img {
+  border-radius: 7px;
+  width: 180px;
+  margin-bottom: 20px; }
+
+.donar-persona h2 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0; }
+
+.donar-persona p {
+  line-height: 1.5; }
+
+.donar-fecha{
+  color: #b3b3b3;
+  font-size: 13px; 
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/donar/donar_main.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accordion{
+    width: 100%;
+}
+
+.accordion i{
+    color:#F76C6C;
+}
+
+.accordion .card-body{
+    color: black;
+}
+
+
+
+/* FIN DONAR PAGINA*/
+
+/* DONAR SECCION*/
+
+#donar{
+  background-color: #05386B
+} 
+
+.donar-item{
+  color: #ffff;
+  height: 60px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px; 
+    margin-bottom:0px; 
+}
+
+.button {
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  background-color: #F76C6C;
+  border: none;
+  color: #05386b;
+  text-align: center;
+  margin: 10px;
+  /*transition: all 0.5s;*/
+ 
+}
+
+.button span {
+  width: 150px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* FIN DONAR SECCION*/
+
+.form-control {
+    border: 1px solid #DEDEDE;
+   
+    border-radius: 0px;
+    margin-right: -3px;
+    font-size: 16px;
+}
+

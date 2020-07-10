@@ -1,0 +1,6 @@
+Se agrega a los 5 archivos .htm5 contenido en los metatags
+* Title
+* Keywords
+* Description
+
+Se crea un sitemap.xml que quede alojado en la raiz del proyecto.
